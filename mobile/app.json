@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Masjid Amanah",
+    "slug": "masjid-amanah",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "masjidamanah",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "android": {
+      "package": "com.masjidamanah.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#ecfdf5"
+      },
+      "permissions": [],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "masjidamanah",
+              "host": "*"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
+    }
+  }
+}

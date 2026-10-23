@@ -1,0 +1,24 @@
+# Local Postgres for Masjid Amanah migrations & RLS tests
+# Usage: docker compose up -d db
+# Not for production.
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: masjid-amanah-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: masjid_amanah
+    ports:
+      - "54322:5432"
+    volumes:
+      - masjid_amanah_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d masjid_amanah"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  masjid_amanah_pg:

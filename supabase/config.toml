@@ -1,0 +1,10 @@
+# Minimal Supabase CLI config for Masjid Amanah
+# Full init via `supabase init` may overwrite; keep migrations/ authoritative.
+
+[db]
+port = 54322
+major_version = 16
+
+[api]
+enabled = true
+port = 54321
